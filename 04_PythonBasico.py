@@ -65,4 +65,55 @@ print(ss)
 #========================
 # Uso de diccionarios
 #========================
+capitales = {"USA":"Washington D.C.", "France":"Paris", "India":"New Delhi"}
+print(capitales)
+
+#==============
+# llave:valor
+#==============
+# diccionario vacio
+d = {}
+
+# Lave entera, valor string
+numeros={2:"dos", 4:"cuatro", 5:"cinco"}
+
+# Llave real, valor string
+decimales={2.5:"dos y medio", 3.5:"tres y medio", 4.5:"cuatro y medio"}
+
+# Llave tupla, valor string
+cosas={("Kevinsky","Jean","Beck"):"apellidos", ("SAMSUNG","TOYOTA","Apple"): "marcas"}
+
+# Llave string, valor int
+romanos = {'I':1, 'II':2, 'III':3, 'IV':4, 'V':5}
+print(romanos)
+print(romanos["I"])
+
+print(capitales.get("India"))
+print(capitales.get("india"))
+
+# Reportar llave y valor 
+for k in capitales:
+  print("key = " + k + ", Value = " + capitales[k])
+
+# Nuevo dato para el diccionario
+capitales["Aguascalientes"] = "Aguascalientes"
+print(capitales)
+
+# Borrar dato del diccionario
+del capitales["Aguascalientes"]
+print(capitales)
+
+# Borrar todo el diccionario
+del capitales
+
+# Reportar llaves
+print(romanos.keys())
+
+# Reportar valores
+print(romanos.values())
+
+# Juicio de llave (está o no está la llave en el diccionario)
+print("I" in romanos)
+print("X" in romanos)
+print("XX" in romanos)
 
