@@ -1,0 +1,97 @@
+#================================
+# Curso de Paradigamas de Programación
+# Semestre 2025-1
+#===============================
+
+#==============================
+# Uso de la terminal (UNIX)
+#==============================
+ls      -> (lis) listado de archivos en el directorio
+cd xxx  -> (change directory) cambio de directorio
+           xxx = null    te lleva a home
+           xxx = ..      te regresa al directorio anterior
+           xxx = ../..   te regresa dos directorios anteriores
+mkdir x -> (make directory) crear la carpeta x 
+clear   -> limpia la terminal
+pwd     -> (present working directory) ruta en la que te encuentras
+cp x y  -> (copy)copiar archivo x al y
+mv x y  -> (move) copiar y borrar archivo x al y
+rm xxx  -> (remove) borrar un archivo
+           xxx = * borra todo el directorio
+           xxx = *.py borra todos los que terminan en .py
+           xxx = data* borra todo lo que emieza con data
+rm -r xxx -> borrar un directorio completo
+rmdir     -> borrar un directorioo vacío
+ps -ef    -> lista de procesos en la máquina
+kill -9 xxx -> (matar) matar proceso
+man xxx    -> manual de la instrucción xxx
+
+#=============================
+# Instalar aplicaciones
+#============================
+sudo apt-get update         -> actuzalice la lista de programas a renovar
+
+ 
+
+
+
+
+
+
+   
+    
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+C
+B
+           xxx = ..      te regresa al directorio 
+
+ 
+
+
+
+
