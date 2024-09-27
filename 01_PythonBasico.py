@@ -1,10 +1,9 @@
-
 #==============================================
-#Chan Campos Ashanty Iyari
+# Chan Campos Ashanty Iyari
 #==============================================
-#Paradigmas de Programación
-#Matemática Algorítmica
-#ESFM-IPN sept-2025
+# Paradigmas de Programación
+# Matemática Algorítmica
+# ESFM-IPN sept-2025
 #=============================================
 
 '''ESTE ES UN SUPERCOMENTARIO
@@ -68,6 +67,34 @@ matriz = [ [1, 2, 3, 4],[5,6,7,8],[9,10,11,12] ]
 print(lista)
 print(matriz)
 
+#==================================================================
+# Identación estricta para procesos dependientes de : (dos puntos)
+#=================================================================
+if  10>2:
+   print("diez es mayor que dos")
+   print("otra identación")
+for i in lista:
+   print(i)
+   print("ok")
+if 10>2:
+   print("verdadero")
+   if 5<30:
+      print("verdadero")
+elif 7>2   # comienza segundo condicional, así mismo "elif" es para evaluar una cadena de múltiples condiciones
+print("esto no se imprimira")
+else: 
+print("aquí nunca llega")
+
+#==============
+# Funciones
+#==============
+def saludar(nombre):
+   print("Hola ", nombre)
+   print("Bienvenido al tutorial de Python")
+
+saludar("Ashanty")
+
+   
 
 
 
