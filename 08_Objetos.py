@@ -69,6 +69,7 @@ micoche = Coche(llanta1,llanta2,llanta3,llanta4)
 print("Total de llantas: ",Llanta.cuenta) #Variable global de la clase
 print("Presión de llanta 4 = ",llanta4.presión) #Presión  de la llanta 4
 print("Radio de llanta 4 = ",llanta4.radio)
+print("Radio de la llanta 3 = ",llanta3.radio)
 print("Presión de la llanta 1 de mi coche = ", micoche.llanta1.presión)
 
 #================
@@ -81,7 +82,7 @@ print("Presión de la llanta 1 de mi coche = ", micoche.llanta1.presión)
 #===================================================================
 class Estudiante:
    def __init__(mi):
-       mi.__nombre=''
+       mi.__nombre = ''
    def ponerme_nombre(mi, nombre):
        print('se llamó a ponerme_nombre')
        mi.__nombre = nombre
@@ -149,15 +150,15 @@ class Cuadrado(Rectangulo):
     def area(self):
         area = self.lado1**2
         return area
-    # def perímetro(self):
-    #   p = 4.0*self.lado1
-    #   print("perímetro =",p)
-    #   return p
+     # def perímetro(self):
+       # p = 4.0*self.lado1
+       # print("perímetro =",p)
+       # return p
 
 #==================
 # Crear un cuadrado
 #==================
-cuadrado1 = Cuadrado(7)
+cuadrado1 = Cuadrado(5)
 
 #=====================================================
 # Llamar al método perímetro de su abuelo Cuadrílatero
