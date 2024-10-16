@@ -30,6 +30,42 @@ man xxx    -> manual de la instrucción xxx
 # Instalar aplicaciones
 #============================
 sudo apt-get update         -> actuzalice la lista de programas a renovar
+sudo apt-get upgrade        -> baja los programas necesarios a actualizar
+sudo apt-get install xxx    -> instalar aplicación xxx
+
+#===================================
+# Instrucciones de vi
+# Requiere de un comando para actuar
+#===================================
+R      -> (replace) escribir y reemplazar
+i      -> (insert) escribir desplazando
+o      -> abrir renglón abajo 
+O      -> abrir renglón arriba
+dd     -> borrar renglón
+D      -> borrar lo que hay a partir de ese punto hacia adelante 
+/xxx   -> buscar xxx
+          si hay varios n -> siguiente
+                        N -> anterior
+x      -> borrar
+:x     -> me manda a la línea x 
+          x=$ la última línea
+10(instrucción) -> repite la instrucción 10 veces 
+:w     -> (write) graba el archivo
+:wq    -> graba y sale del archivo
+:q!    -> se sale y no graba 
+
+#======================
+# Instrucciones de git
+#======================
+git init 
+git config --global user.name "Ashanty-Chan"
+git config --global user.email "youremail@gmail.com"
+git clone https://...
+git add
+git commit -n "Mensaje sobre el código"
+git push
+
+
 
  
 
