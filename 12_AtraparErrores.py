@@ -30,7 +30,7 @@ try:
 #=============================================
 # EXception es el objeto más general del error
 #=============================================
-except Exception as e:
+except EXception as e:
     print("ERror: " + str(e))
 
 #==================================
