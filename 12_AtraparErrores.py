@@ -30,8 +30,8 @@ try:
 #=============================================
 # EXception es el objeto más general del error
 #=============================================
-except EXception as e:
-    print("ERror: " + str(e))
+except Exception as e:
+    print("Error: " + str(e))
 
 #==================================
 #Error por usar un atributo privado
