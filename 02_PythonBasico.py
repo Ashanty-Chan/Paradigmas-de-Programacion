@@ -7,7 +7,7 @@
 #=================================
 
 #===================================================
-# INput permite obtener datos del usuario en prompter
+# Input permite obtener datos del usuario en prompter
 #====================================================
 nombre = input("Dame tu nombre: ")
 print("Hola como estás", nombre)
