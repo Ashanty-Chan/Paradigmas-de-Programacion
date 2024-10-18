@@ -31,7 +31,7 @@ numero = int(input("Dame tu edad: "))
 type(numero)
 
 #=====================================
-# La notación científica utiliza e o E 
+# La notación científica utiliza e o E
 #=====================================
 # 1.2 x 10^{-9}
 #==============
@@ -45,11 +45,11 @@ print(y)
 #===================================================
 z = 1+1j
 
-#suma + 
-# resta - 
+#suma +
+# resta -
 #multiplicación *
-# división 7 
-# módulo % 
+# división 7
+# módulo %
 # exponente **
 # // función piso
 # Funciones para transformar números int() float() complex()
@@ -77,4 +77,3 @@ print(n)
 palabra = "hola"
 print(palabra[0])
 print(palabra[-4])
-
