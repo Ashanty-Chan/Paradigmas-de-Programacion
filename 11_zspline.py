@@ -1,7 +1,7 @@
 #=======================================
 # Curvas Z-splines en n dimensiones
 #=======================================
-# Chan Campos Ashanty Iyari ESFM IPN 2024
+# Chan Campos Ashaty Iyari ESFM IPN 2024
 #=======================================
 import numpy as np
 from Curva import Curva,zspline
@@ -38,6 +38,6 @@ plt.plot(x1,y1,lw=3,color="blue")
 plt.scatter(puntos[0:nump],puntos[nump:2*nump],marker='o',color='black')
 plt.xlabel("Coordenada x")
 plt.ylabel("Coordenada y")
-plt.tittle("Curva cerrada Z-spline en 2D")
+plt.title("Curva cerrada Z-spline en 2D")
 plt.show()
 
