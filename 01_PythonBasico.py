@@ -3,7 +3,7 @@
 #==============================================
 # Paradigmas de Programación
 # Matemática Algorítmica
-# ESFM-IPN sept-2025
+# ESFM-IPN sept-2024
 #=============================================
 
 '''ESTE ES UN SUPERCOMENTARIO
