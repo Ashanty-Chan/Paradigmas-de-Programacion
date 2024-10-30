@@ -25,7 +25,7 @@ print(nums)
 #===================================
 s = set('Hola')
 print(s)
-s = set(5,4,3,2,1))    # tupla a conjunto
+s = set(5,4,3,2,1)     # tupla a conjunto
 print(s)
 
 #=============================================
