@@ -44,7 +44,7 @@ serie = 250
 error1 = []
 error2 = []
 x0 = 0.0
-b = list(rage(m))
+b = list(range(m))
 x = [x0+n*0.1 for n in b] # multiplicar una lista por un npumero
 for i in range(m):
     y = x0+0.1*i
