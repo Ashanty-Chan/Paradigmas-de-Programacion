@@ -25,7 +25,7 @@ print(nums)
 #===================================
 s = set('Hola')
 print(s)
-s = set(5,4,3,2,1)    # tupla a conjunto
+s = set((5,4,3,2,1))    # tupla a conjunto
 print(s)
 
 #=============================================
@@ -38,7 +38,7 @@ print(s)
 s.add(100)
 print(s)
 
-s.update(num,s)
+s.update(nums)
 print(s)
 
 s.remove(100)
@@ -47,7 +47,7 @@ print(s)
 s1={1,2,3,4,5}
 s2={4,5,6,7,8}
 
-su = s1s2  # Unión
+su = s1|s2  # Unión
 print(su)
 
 si = s1&s2   # Intersección
