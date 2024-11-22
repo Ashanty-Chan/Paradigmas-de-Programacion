@@ -14,7 +14,7 @@ class Computadora:
     ram: int = 0
 
     #============
-    # Contructor
+    # Constructor
     #============
     def __init__(self, marca:str, capacidad:int, ram:int):
         print(f"Accediendo al constructor de la pc: {marca}")
@@ -49,12 +49,12 @@ class Persona:
         self.apellidos = apellidos
         self.edad = edad
         self.direccion = direccion
-        self.computadora = Computadora(marca, capacidad, ram)
+        self.Computadora = Computadora(marca, capacidad, ram)
         print(f"--- Accedimos al constructor de la persona: {nombres} {apellidos}")
 
         def imprimirInfo(self) -> None:
             print(f"--- Mi nombre es {self.nombres} {self.apellidos}, tengo {self.edad} años de edad, vivo en {self.direccion} ")
-            self.computadora.imprimirInfoPC()
+            self.Computadora.imprimirInfoPC()
 
 
         #============
