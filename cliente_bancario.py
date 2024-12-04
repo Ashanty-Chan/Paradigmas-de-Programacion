@@ -40,7 +40,7 @@ class ClienteBancario:
     # método privado que checa si el balance es negativo
     # y genera un error
     # ===================================================
-    def __validarCantidad(self, balenceDeCuenta: float) -> None:
+    def __validarCantidad(self, balanceDeCuenta: float) -> None:
         if balanceDeCuenta < 0:
             raise Exception("El balance en la cuenta no puede ser negativo")
 
