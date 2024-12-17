@@ -31,7 +31,8 @@ def exponencial(n:int=1500,x:float=0.5):
 def exponencial_pro(n:int=1500,x:float=0.5):
     flag = False
     if x<0:
-        flag = Truex = -x
+        flag = True
+        x = -x
     s = 1.0
     for i in range(n,0,-1):
         s *= x/float(i)
@@ -45,7 +46,7 @@ error1 = []
 error2 = []
 x0 = 0.0
 b = list(range(m))
-x = [x0+n*0.1 for n in b] # multiplicar una lista por un npumero
+x = [x0+n*0.1 for n in b] # multiplicar una lista por un número
 for i in range(m):
     y = x0+0.1*i
     error1.append(exponencial(serie,y)-math.exp(y))
