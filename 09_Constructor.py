@@ -52,16 +52,15 @@ class Persona:
         self.Computadora = Computadora(marca, capacidad, ram)
         print(f"--- Accedimos al constructor de la persona: {nombres} {apellidos}")
 
-        def imprimirInfo(self) -> None:
-            print(f"--- Mi nombre es {self.nombres} {self.apellidos}, tengo {self.edad} años de edad, vivo en {self.direccion} ")
-            self.Computadora.imprimirInfoPC()
+    # This method was incorrectly indented. It should be at the same level as the __init__ method
+    def imprimirInfo(self) -> None:
+        print(f"--- Mi nombre es {self.nombres} {self.apellidos}, tengo {self.edad} años de edad, vivo en {self.direccion} ")
+        self.Computadora.imprimirInfoPC()
 
 
-        #============
-        # Destructor
-        #============
-        def __del__(self):
-                print(f"--- Eliminamos a la persona... {self.nombres} {self.apellidos}")
+    # This method was incorrectly indented. It should be at the same level as the __init__ method
+    def __del__(self):
+            print(f"--- Eliminamos a la persona... {self.nombres} {self.apellidos}")
 
 #==========================
 # Función 1 es el programa
