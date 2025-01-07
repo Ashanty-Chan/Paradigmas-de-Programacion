@@ -19,6 +19,12 @@ bigdata = [7,10,9,22,12,6,4,19,1,45]
 #=============
 multiplicar = lambda x,y: x*y
 
+#=============
+# Función x+y
+#=============
+suma = lambda x,y: x+y # Define the 'suma' function for addition
+
+
 print(reduce(multiplicar,bigdata))
 print(reduce(suma,bigdata))
 
