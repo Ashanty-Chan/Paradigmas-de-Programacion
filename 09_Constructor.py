@@ -29,7 +29,7 @@ class Computadora:
     # Destructor
     #============
     def __del__(self):
-            print(f"Se eliminó la computadora: {self.marca}")
+        print(f"Se eliminó la computadora: {self.marca}")
 
 #================
 # Clase persona

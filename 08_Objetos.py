@@ -15,22 +15,24 @@
 # No está tan vacío, necesita
 # la palabra pass = pasar
 #==============================
-class ObjetoVacio:
+class Objetovacio:
     pass
+
 
 #=================================================
 # nada es la instanciación de la clase ObjetiVacio
 #=================================================
-nada = ObjetoVacio()
+nada = Objetovacio()
 print(type(nada))
+
 
 #================
 # La clase llanta
 #================
 class Llanta:
-    #===================================
-    # Variable cuenta es de toda la clase
-    #===================================
+    #=================================
+    # Variable cuenta es de toda clase
+    #=================================
     cuenta = 0
     #===================================
     # Función constructora de identidad
@@ -39,38 +41,41 @@ class Llanta:
     # pero puede ser otro nombre (mi)
     # parámetros de entrada = default
     #==================================
-    def __init__(mi,radio=50,ancho=30,presión=1.5):
-        # variable de la estructura completa llanta
-        Llanta.cuenta += 1
+    def __init__(mi, radio=60, ancho=40, presión=2.5):
+        # variable de la estructura completa Llanta
+        Llanta.cuenta += 2
         # variables exclusivas de cada objeto
         mi.radio = radio
         mi.ancho = ancho
         mi.presión = presión
 
 #=======================
-# Objetos (instanciados)
+# objetos (instanciados)
 #=======================
-llanta1 = Llanta(50,30,1.5)
-llanta2 = Llanta(presión=1.2)
+llanta1 = Llanta(60, 40, 2.5)
+llanta2 = Llanta(presión=1.7)
 llanta3 = Llanta()
-llanta4 = Llanta(40,30,1.6)
+llanta4 = Llanta(80, 50, 1.9)
 
-#==================================
-# Objeto que contiene otros objetos
-#==================================
+
+#====================================
+# Objeto que contiene a otros objetos
+#====================================
 class Coche:
-    def __init__(mi,ll1,ll2,ll3,ll4):
+    def __init__(mi, ll1, ll2, ll3, ll4):
         mi.llanta1 = ll1
         mi.llanta2 = ll2
         mi.llanta3 = ll3
         mi.llanta4 = ll4
-micoche = Coche(llanta1,llanta2,llanta3,llanta4)
 
-print("Total de llantas: ",Llanta.cuenta) #Variable global de la clase
-print("Presión de llanta 4 = ",llanta4.presión) #Presión  de la llanta 4
-print("Radio de llanta 4 = ",llanta4.radio)
-print("Radio de la llanta 3 = ",llanta3.radio)
-print("Presión de la llanta 1 de mi coche = ", micoche.llanta1.presión)
+
+micoche = Coche(llanta1, llanta2, llanta3, llanta4)
+
+print("total de llantas:", Llanta.cuenta)
+print("Presión de la llanta 4 = ", llanta4.presión)
+print("Radio de la llanta 4 = ", llanta4.radio)
+print("Radio de la llanta 3 = ", llanta3.radio)
+print("Presión de la llanta 1 de mi choche = ", micoche.llanta1.presión)
 
 #================
 # Encapsulamiento
@@ -78,18 +83,21 @@ print("Presión de la llanta 1 de mi coche = ", micoche.llanta1.presión)
 
 #====================================================================
 # Uso de la función de python property para poner y obtener atributos
-# a variable protegidas con __
-#===================================================================
+# a variables protegidas con __
+# ====================================================================
 class Estudiante:
-   def __init__(mi):
-       mi.__nombre = ''
-   def ponerme_nombre(mi, nombre):
-       print('se llamó a ponerme_nombre')
-       mi.__nombre = nombre
-   def obtener_nombre (mi):
-       print('se llamó a obtener_nombre')
-       return mi.__nombre
-   nombre=property(obtener_nombre,ponerme_nombre)
+    def __init__(mi):
+        mi.__nombre = ''
+
+    def ponerme_nombre(mi, nombre):
+        print('se llamó a ponerme_nombre')
+        mi.__nombre = nombre
+
+    def obtener_nombre(mi):
+        print('se llamó a obtener_nombre')
+        return mi.__nombre
+
+    nombre = property(obtener_nombre, ponerme_nombre)
 
 #===================================
 # Crear objeto estudiante sin nombre
@@ -97,40 +105,39 @@ class Estudiante:
 estudiante = Estudiante()
 
 #======================================================================
-# Ponerle nombre usuando la propiedad nombre y el método ponerme_nombre
-# (sin tener que llamar explícitamente la función)
+# Ponerle nombre usando la propiedad nombre y el método ponerme_nombre.
+# Sin tener que llamar explícitamente a la función obtener_nombre.
 #======================================================================
 estudiante.nombre = "Carlos"
 
-#==================================================================
+#=================================================================
 # Obtener el nombre con el método obtener_nombre
-# _nombre es una variable encapsulada (no visible desde fuera)
-# (sin tener que llamar explucítamente a la función obtener_nombre)
+# __nombre es una variable encapsulada(no visisble desde fuera.)
+# Sin tener que llamar explícitamente a la función obtener_nombre
 #==================================================================
 print(estudiante.nombre)
 
-#Esto no funciona
-# print(estudiante._nombre)
+# Esto no funciona...
+# print(estudiante.__nombre)
 
 #===================
 # Herencia de clases
 #===================
 class Cuadrilatero:
     def __init__(mi, a, b, c, d):
-        mi.lado1=a
-        mi.lado2=b
-        mi.lado3=c
-        mi.lado4=d
+        mi.lado1 = a
+        mi.lado2 = b
+        mi.lado3 = c
+        mi.lado4 = d
 
-def perimetro(mi):
-    p=mi.lado1 + mi.lado2 + mi.lado3 + mi.lado4
-    print("perimetro=",p)
-    return p
+    def perimetro(mi):
+        p = mi.lado1 + mi.lado2 + mi.lado3 + mi.lado4
+        print("perimetro=", p)
+        return p
 
 #===================================
 # Su hijo rectángulo
-# Rectángulo es hijo de cuadrilátero
-# Rectángulo(Cuadrilátero)
+# Rectángulo es hijo de cuádrilatero
 #===================================
 class Rectangulo(Cuadrilatero):
     def __init__(self, a, b):
@@ -140,40 +147,33 @@ class Rectangulo(Cuadrilatero):
         super().__init__(a, b, a, b)
 
 #===================
-# Su nieto Cuadrado
-# Hijo de rectángulo
+# Su nieto cuadrado
+# Hijo de Rectángulo
 #===================
 class Cuadrado(Rectangulo):
     def __init__(self, a):
-        super().__init__(a,a)
+        super().__init__(a, a)
 
     def area(self):
-        area = self.lado1**2
+        area = self.lado1 ** 2
         return area
-     # def perímetro(self):
-       # p = 4.0*self.lado1
-       # print("perímetro =",p)
-       # return p
 
-#==================
+#===================
 # Crear un cuadrado
-#==================
+# ==================
+
 cuadrado1 = Cuadrado(5)
 
-#=====================================================
-# Llamar al método perímetro de su abuelo Cuadrílatero
-#=====================================================
+#======================================================
+# Llamar al método perimetro de su abuelo Cuadrilatero
+#======================================================
 perimetro1 = cuadrado1.perimetro()
 
-#===============================
-# Llamar a su propio método área
-#===============================
+#==================================
+# Llamar a su propio método de área
+#==================================
 area1 = cuadrado1.area()
 
-print("Perímetro = ", perimetro1)
-print("Área = ", area1)
+print("Perimetro = ", perimetro1)
+print("Area = ", area1)
 
-#============================================================
-# Sobre-escribir un método de su madre o abuela o tatarabuela
-# Es volver a definir una función ya existente
-#============================================================

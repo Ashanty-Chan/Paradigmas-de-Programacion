@@ -1,7 +1,7 @@
 #=======================================
 # Curvas Z-splines en n dimensiones
 #=======================================
-# Chan Campos Ashaty Iyari ESFM IPN 2024
+# Chan Campos Ashanty Iyari ESFM IPN 2024
 #=======================================
 import numpy as np
 from Curva import Curva,zspline
