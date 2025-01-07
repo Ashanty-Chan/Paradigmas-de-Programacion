@@ -9,14 +9,14 @@
 # Clase Usuario
 #==============
 class Usuario:
-    __nombre: str
-    __apellido: str
-    __edad: int
+    __nombre:str
+    __apellido:str
+    __edad:int
 
     #============
     # Constructor
     #=============
-    def __init__(mi, nombre: str, apellido: str, edad: int):
+    def __init__(mi, nombre:str, apellido:str, edad:int):
         mi.__nombre = nombre
         mi.__apellido = apellido
         mi.__edad = edad

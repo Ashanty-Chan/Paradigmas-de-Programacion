@@ -2,12 +2,12 @@
 # Clase ClienteBancario
 # ======================
 class ClienteBancario:
-    __nombres: str = None
-    __apellidos: str = None
-    __edad: int = 0
-    __balanceDeCuenta: float = 0.0
+    __nombres:str = None
+    __apellidos:str = None
+    __edad:int = 0
+    __balanceDeCuenta:float = 0.0
 
-    def __init__(self, nombres: str, apellidos: str, edad: int = 0, balanceDeCuenta: float = 0.0):
+    def __init__(self, nombres:str, apellidos:str, edad:int = 0, balanceDeCuenta:float = 0.0):
         self.__validarEdad(edad)
         self.__validarCantidad(balanceDeCuenta)
         self.nombres = nombres
@@ -18,23 +18,22 @@ class ClienteBancario:
     def getNombreCompleto(self) -> str:
         return self.nombres + " " + self.apellidos
 
-    def __mandarEmail(self, titulo: str, texto: str) -> None:
+    def __mandarEmail(self, titulo:str, texto:str) -> None:
         print("mandar email: " + titulo + " con texto: " + texto)
 
-    def __enviarBalanceAlBanco(self, cantidad: float) -> None:
+    def __enviarBalanceAlBanco(self, cantidad:float) -> None:
         print("Enviando cantidad: " + str(cantidad) + " al banco...")
 
     # ===========================================
     # Método privado con dos guiones bajos
     # Si la edad es menor que 18 genera un error
     # ===========================================
-    def __validarEdad(self, edad: int) -> None:
+    def __validarEdad(self, edad:int) -> None:
         if edad < 18:
             raise Exception("Es menor de edad")
 
     def imprimirInfo(self) -> str:
-        return "Nombre: " + self.getNombreCompleto() + ", Edad: " + str(self.__edad) + ", Balance: " + str(
-            self.__balanceDeCuenta)
+        return "Nombre: " + self.getNombreCompleto() + ", Edad: " + str(self.__edad) + ", Balance: " + str(self.__balanceDeCuenta)
 
     # ===================================================
     # Método privado que checa si el balance es negativo
