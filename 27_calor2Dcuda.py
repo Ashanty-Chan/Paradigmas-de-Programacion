@@ -39,7 +39,7 @@ pasos:int = 100000
 dx = L/n
 udx2 = 0.5/(dx*dx)
 # Paso de tiempo
-dt = 0.75*(min(dx[0],dx[1])**2)/kd
+dt = 0.25*(min(dx[0],dx[1])**2)/kd
 print("dt =",dt)
 # Total de celdas
 nt = n[0]*n[1]
@@ -68,11 +68,11 @@ evolucion_gpu = cuda.jit(device=True)(evolucion)
 def solucion_kernel(u_d,un_d,udx2_0,udx2_1,dt,n_0,n_1,kd):
     ii, jj = cuda.grid(2)
     i = ii + n_0*jj
-    if ii==0 or jj==0 or ii==n or jj==n_1-1:
+    if ii==0 or jj==0 or ii==n_0-1 or jj==n_1-1:
         unueva = 0.0
     else:
         unueva = evolucion_gpu(u_d,n_0,n_1,udx2_0,udx2_1,dt,kd,i)
-    if i == int(n_0*n_1)/2*int(n_0/2):
+    if i == int(n_0*n_1)/2+int(n_0/2):
         unueva = 1.0
     un_d[i] = unueva
 
@@ -106,7 +106,7 @@ for t in range(1,pasos+1):
 #======================
 # Pasar arreglo al CPU
 #======================
-u_d.copu_to_host(u)
+u_d.copy_to_host(u)
 end = time.time()
 print("Tardó: ",end-start,"s")
 
@@ -116,6 +116,5 @@ print("Tardó: ",end-start,"s")
 u = np.reshape(u,(n[0],n[1]))
 x,y = np.meshgrid(np.arange(0,L[0],dx[0]),np.arange(0,L[1],dx[1]))
 ax = plt.axes(projection='3d')
-ax.plot_surface(x,y,u,cmap=cm-hsv)
-plt.show
-
+ax.plot_surface(x,y,u,cmap=cm.hsv)
+plt.show()
