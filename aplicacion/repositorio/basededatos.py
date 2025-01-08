@@ -11,9 +11,9 @@ from aplicacion.modelos.usuario import Usuario
 # Para llenar la interface hay que heredar la clase
 #==================================================
 class BaseDeDatos(RepositorioDeUsuarios):
-    __host: str
-    __user: str
-    __password: str
+    __host:str
+    __user:str
+    __password:str
 
     def __init__(mi, host:str, user:str, password:str):
         mi.__host = host
@@ -30,5 +30,5 @@ class BaseDeDatos(RepositorioDeUsuarios):
         print(f"Guardando el usuario en la base de datos {usuario.getNombre()}\n")
         print(f"INSERTAR DATOS DEL USUARIO ('{userElements[' nombre']}','{userElements['apellido']}',{userElements['edad']})")
 
-        def cerrar(mi) -> None:
-            print("Cerrando la conexión")
+    def cerrar(mi) -> None:
+        print("Cerrando la conexión")

@@ -19,7 +19,7 @@ class ManejoDeInscripciones:
     # El bjeto ManejoDeINscripciones es la interface intercambiable
     #==============================================================
     @staticmethod
-    def inscribirUsuario(usuario: Usuario, repositorioDeUsuarios: RepositorioDeUsuarios) -> None:
+    def inscribirUsuario(usuario:Usuario, repositorioDeUsuarios:RepositorioDeUsuarios) -> None:
         print("------> Guardando usuario ...\n")
         repositorioDeUsuarios.abrir()
         repositorioDeUsuarios.guardar(usuario)

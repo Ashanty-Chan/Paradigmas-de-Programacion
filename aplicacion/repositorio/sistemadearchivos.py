@@ -12,18 +12,18 @@ from aplicacion.modelos.usuario import Usuario
 # Implementa la interface RepositorioDeUsuarios
 # ==============================================
 class SistemaDeArchivos(RepositorioDeUsuarios):
-    __directorio: str
+    __directorio:str
 
-    def __init__(mi, directorio: str):
+    def __init__(mi, directorio:str):
         mi.__directorio = directorio
 
     def abrir(mi) -> None:
         print(f"Abrir directorio: {mi.__directorio}")
 
-    def guardar(mi, usuario: Usuario) -> None:
-        xml = f"</root></name>{usuario.getNOmbre()}</name></lastName>{usuario.getApellido()}</lastName></age>{usuario.getEdad()}</age></root>"
-        print(f"GUardando usuario en el archivo :{mi.__directorio}/{usuario.getNOmbre()}")
+    def guardar(mi, usuario:Usuario) -> None:
+        xml = f"</root></name>{usuario.getNombre()}</name></lastName>{usuario.getApellido()}</lastName></age>{usuario.getEdad()}</age></root>"
+        print(f"Guardando usuario en el archivo :{mi.__directorio}/{usuario.getNombre()}")
         print(xml)
 
-        def cerrar(mi) -> NOne:
-            print("Cerrando el archivo")
+    def cerrar(mi) -> None:
+        print("Cerrando el archivo")
